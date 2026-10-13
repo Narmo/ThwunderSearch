@@ -1,0 +1,6 @@
+[
+  {
+    "namespace": "searchStyle",
+    "description": "Styles global search, fixes recipient labels and embeds the native message viewer."
+  }
+]

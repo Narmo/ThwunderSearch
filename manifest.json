@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "ThwunderSearch",
+  "version": "1.0.0",
+  "author": "Nikita Denin",
+  "description": "Compact global search results with an integrated message preview and Thunderbird's filters.",
+  "icons": {
+    "16": "icons/thwundersearch.svg",
+    "32": "icons/thwundersearch.svg",
+    "64": "icons/thwundersearch.svg"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "thwundersearch@local.invalid",
+      "strict_min_version": "157.0",
+      "strict_max_version": "157.*"
+    }
+  },
+  "experiment_apis": {
+    "searchStyle": {
+      "schema": "api/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "events": ["startup"],
+        "script": "api/searchStyle.js"
+      }
+    }
+  }
+}
