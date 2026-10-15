@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing release tag (e.g. v1.2.0)"
+        required: true
+        type: string
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: refs/tags/${{ env.RELEASE_TAG }}
+          persist-credentials: false
+      - name: Build XPI
+        run: |
+          version=$(python3 -c 'import json; print(json.load(open("manifest.json"))["version"])')
+          if [ "$RELEASE_TAG" != "v$version" ]; then
+            echo "::error::Tag $RELEASE_TAG does not match manifest version $version"
+            exit 1
+          fi
+          scripts/build.sh
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$RELEASE_TAG" \
+            "dist/thwundersearch-${RELEASE_TAG#v}.xpi" \
+            --verify-tag --generate-notes \
+            --title "$RELEASE_TAG"
