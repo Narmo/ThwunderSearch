@@ -33,7 +33,7 @@ column sorting or a draggable divider. Folder Quick Filter and the separate
 
 1. In Thunderbird, open **Tools → Add-ons and Themes → Extensions**.
 2. Open the gear menu and choose **Install Add-on From File…**.
-3. Select `dist/thwundersearch-1.1.1.xpi` and confirm the permission prompt.
+3. Select `dist/thwundersearch-1.2.0.xpi` and confirm the permission prompt.
 4. Run a global search. Already-open search tabs are restyled too.
 
 Disable or remove the extension to restore the original appearance immediately.
