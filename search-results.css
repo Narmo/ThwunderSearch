@@ -1,5 +1,5 @@
 /* Scope every override to global search, never to messages or the inbox.
-   shortcut: these selectors target Thunderbird 157–158's internal markup; review before raising the version cap. */
+   shortcut: these selectors target Thunderbird 157–159's internal markup; review before raising the version cap. */
 @-moz-document url("chrome://messenger/content/glodaFacetView.xhtml") {
   #gloda-facet-view {
     grid-template-columns: 16em minmax(0, 1fr) !important;

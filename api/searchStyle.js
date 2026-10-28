@@ -9,7 +9,7 @@ var searchStyle = class extends ExtensionCommon.ExtensionAPI {
     this.styles.loadAndRegisterSheet(this.uri, this.styles.USER_SHEET);
     Services.obs.addObserver(this, "document-element-inserted");
     for (const win of Services.wm.getEnumerator("mail:3pane")) {
-      for (const tab of win.document.getElementById("tabmail").tabInfo) {
+      for (const tab of win.document.getElementById("tabmail")?.tabInfo ?? []) {
         this.observe(tab.browser?.contentDocument);
       }
     }

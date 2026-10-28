@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "ThwunderSearch",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Nikita Denin",
   "description": "Compact global search results with an integrated message preview and Thunderbird's filters.",
   "icons": {
@@ -13,7 +13,7 @@
     "gecko": {
       "id": "thwundersearch@narmo",
       "strict_min_version": "157.0",
-      "strict_max_version": "158.*"
+      "strict_max_version": "159.*"
     }
   },
   "experiment_apis": {
