@@ -33,7 +33,7 @@ column sorting or a draggable divider. Folder Quick Filter and the separate
 
 1. In Thunderbird, open **Tools → Add-ons and Themes → Extensions**.
 2. Open the gear menu and choose **Install Add-on From File…**.
-3. Select `dist/thwundersearch-1.2.1.xpi` and confirm the permission prompt.
+3. Select `dist/thwundersearch-1.3.0.xpi` and confirm the permission prompt.
 4. Run a global search. Already-open search tabs are restyled too.
 
 Disable or remove the extension to restore the original appearance immediately.
@@ -108,8 +108,8 @@ suite.
 Bump `manifest.json` and commit it before tagging, for example:
 
 ```sh
-git tag -a v1.2.1 -m "ThwunderSearch 1.2.1"
-git push origin HEAD v1.2.1
+git tag -a v1.3.0 -m "ThwunderSearch 1.3.0"
+git push origin HEAD v1.3.0
 ```
 
 The tagged commit must include the workflow for automatic releases. To release
