@@ -2,7 +2,7 @@
 
 <img src="icons/thwundersearch.svg" width="64" height="64" alt="ThwunderSearch icon">
 
-A small Thunderbird **157.x–160.x** extension that restyles **global search** results
+A small Thunderbird **157.x–161.x** extension that restyles **global search** results
 as compact mail-style rows with a reading pane, without replacing the search
 engine or its filters. Author: **Nikita Denin**.
 
@@ -51,7 +51,7 @@ search-result metadata and passes message URIs to Thunderbird's native viewer;
 it does not parse message HTML, collect mail or send it to an external service.
 Only install a build whose source you trust.
 
-Compatibility is deliberately capped at 160.x because the page's internal
+Compatibility is deliberately capped at 161.x because the page's internal
 markup is not a stable extension API. Recheck it before increasing the cap.
 Third-party extensions that also restyle global search may conflict.
 
@@ -77,6 +77,11 @@ Thunderbird 160.0 was checked live on macOS the same way: the global search
 page, its styles and scripts and the message viewer are unchanged from 159.0,
 and previews, routed header commands, keyboard navigation, opening results in
 a tab and disable/enable cleanup work, also with the other add-ons enabled.
+
+Thunderbird 161.0 was checked live on macOS the same way: styled results,
+recipients, previews, keyboard navigation, routed header commands, opening
+results in a tab and disable/enable cleanup work, also with the other add-ons
+enabled.
 
 Not tested with a live IMAP account, encrypted mail or on Windows/Linux.
 
